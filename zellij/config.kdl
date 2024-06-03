@@ -3,6 +3,8 @@ keybinds {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
+        unbind "Ctrl h"
+        bind "Ctrl a" { SwitchToMode "Move"; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -38,7 +40,7 @@ keybinds {
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
     move {
-        bind "Ctrl h" { SwitchToMode "Normal"; }
+        bind "Ctrl a" { SwitchToMode "Normal"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
         bind "h" "Left" { MovePane "Left"; }
@@ -178,7 +180,7 @@ keybinds {
         bind "Ctrl t" { SwitchToMode "Tab"; }
     }
     shared_except "move" "locked" {
-        bind "Ctrl h" { SwitchToMode "Move"; }
+        bind "Ctrl a" { SwitchToMode "Move"; }
     }
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
@@ -261,11 +263,11 @@ plugins {
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
 themes {
-    dracula {
+    draculash {
         fg 248 248 242
         bg 40 42 54
         red 255 85 85
-        green 80 250 123
+        green "#bd93f9" 
         yellow 241 250 140
         blue 98 114 164
         magenta 255 121 198
@@ -274,26 +276,16 @@ themes {
         black 0 0 0
         white 255 255 255
     }
-    catppuccin-mocha {
-        bg "#585b70" // Surface2
-        fg "#cdd6f4"
-        red "#f38ba8"
-        green "#a6e3a1"
-        blue "#89b4fa"
-        yellow "#f9e2af"
-        magenta "#f5c2e7" // Pink
-        orange "#fab387" // Peach
-        cyan "#89dceb" // Sky
-        black "#181825" // Mantle
-        white "#cdd6f4"
-      }
 }
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "default"
-theme "catppuccin-mocha"
+//theme "default"
+theme "draculash"
+
+// Example configuration for Zellij
+
 
 // The name of the default layout to load on startup
 // Default: "default"
