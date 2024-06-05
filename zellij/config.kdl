@@ -264,10 +264,10 @@ plugins {
 //
 themes {
     draculash {
-        fg 248 248 242
+        fg "#737272"
         bg 40 42 54
         red 255 85 85
-        green "#bd93f9" 
+        green 248 248 242
         yellow 241 250 140
         blue 98 114 164
         magenta 255 121 198
@@ -290,7 +290,7 @@ theme "draculash"
 // The name of the default layout to load on startup
 // Default: "default"
 //
-// default_layout "compact"
+default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
